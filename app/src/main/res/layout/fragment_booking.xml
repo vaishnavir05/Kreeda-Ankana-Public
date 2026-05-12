@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/dark_slate"
+            android:gravity="center_vertical"
+            android:padding="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_md">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Book a Slot" android:textColor="@color/white"
+                android:textSize="18sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/KreedaCard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <!-- Ground Spinner -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Select Ground" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <Spinner android:id="@+id/spinnerGround"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/spinner_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <!-- Sport Spinner -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Select Sport" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <Spinner android:id="@+id/spinnerSport"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/spinner_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <!-- Slot Type -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Slot Type" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <RadioGroup android:id="@+id/rgSlotType"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <RadioButton android:id="@+id/rbPractice"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Practice"
+                        android:textColor="@color/dark_slate" android:checked="true" />
+                    <RadioButton android:id="@+id/rbMatch"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Match"
+                        android:textColor="@color/dark_slate" />
+                </RadioGroup>
+
+                <!-- Challenger Team (Visible only for Admin) -->
+                <LinearLayout
+                    android:id="@+id/llChallengerTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Select Challenger Team"
+                        android:textColor="#666666"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerChallengerTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_spinner" />
+                </LinearLayout>
+
+                <!-- Opponent Team (Hidden for Practice) -->
+                <LinearLayout
+                    android:id="@+id/llOpponent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Select Opponent" style="@style/SectionHeader"
+                        android:layout_marginBottom="6dp" />
+                    <Spinner android:id="@+id/spinnerOpponentTeam"
+                        android:layout_width="match_parent" android:layout_height="52dp"
+                        android:background="@drawable/spinner_bg"
+                        android:padding="12dp"
+                        android:layout_marginBottom="@dimen/spacing_md" />
+                </LinearLayout>
+
+                <!-- Date -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Date" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/btnPickDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Select Date"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:background="@drawable/edit_text_border"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- Time -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Start Time" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/btnPickTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Select Time (AM/PM)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:background="@drawable/edit_text_border"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- Duration -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Duration" style="@style/SectionHeader"
+                    android:layout_marginBottom="6dp" />
+                <Spinner android:id="@+id/spinnerDuration"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/spinner_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <TextView android:id="@+id/tvBookingError"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/error_red" android:textSize="13sp"
+                    android:visibility="gone" android:layout_marginBottom="@dimen/spacing_sm" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConfirmBooking"
+                    style="@style/KreedaButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Booking" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

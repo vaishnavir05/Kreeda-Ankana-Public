@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <!-- Brand Colors (from logo) -->
+    <color name="mint_green">#A7D6C6</color>
+    <color name="pastel_yellow">#F8EDAA</color>
+    <color name="dark_slate">#5F6D68</color>
+    <color name="dark_slate_dark">#4A5854</color>
+    <color name="light_background">#F4F8F6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="text_primary">#1A2421</color>
+    <color name="text_secondary">#5F6D68</color>
+    <color name="text_hint">#9EAAA7</color>
+    <color name="divider">#E0ECEA</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="success_green">#388E3C</color>
+    <color name="warning_amber">#F57C00</color>
+    <color name="status_pending">#F8EDAA</color>
+    <color name="status_accepted">#A7D6C6</color>
+    <color name="status_declined">#FFCDD2</color>
+    <!-- Bottom Nav -->
+    <color name="nav_selected">#5F6D68</color>
+    <color name="nav_unselected">#9EAAA7</color>
+    <color name="error">#D32F2F</color>
+    <color name="accent_green">#388E3C</color>
+</resources>

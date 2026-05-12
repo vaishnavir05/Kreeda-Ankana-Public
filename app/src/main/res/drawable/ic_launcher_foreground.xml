@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Foreground for adaptive icon.
+    NO padding — logo fills the full 108dp canvas.
+    The system's circular mask will crop it into a perfect circle.
+    gravity="fill" scales the PNG to cover the entire canvas.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/ic_kreeda_logo"
+            android:gravity="fill"
+            android:antialias="true"
+            android:filter="true" />
+    </item>
+</layer-list>

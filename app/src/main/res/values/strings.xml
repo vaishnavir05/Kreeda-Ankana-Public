@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Kreeda-Ankana</string>
+    <string name="app_tagline">Sports · Ground &amp; Match Organizer</string>
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="invalid_name">Name must contain only letters</string>
+    <string name="invalid_email">Email must be a @gmail.com address</string>
+    <string name="invalid_phone">Phone must be exactly 10 digits</string>
+    <string name="invalid_password">Password: min 8 chars, include letter, number &amp; special character</string>
+    <string name="login_failed">Invalid email or password</string>
+    <string name="email_exists">This email is already registered</string>
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_grounds">Grounds</string>
+    <string name="nav_teams">Teams</string>
+    <string name="nav_challenges">Challenges</string>
+    <string name="nav_profile">Profile</string>
+    <!-- Booking -->
+    <string name="book_slot">Book a Slot</string>
+    <string name="select_ground">Select Ground</string>
+    <string name="select_sport">Select Sport</string>
+    <string name="select_slot_type">Slot Type</string>
+    <string name="practice">Practice</string>
+    <string name="match">Match</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_duration">Duration</string>
+    <string name="booking_success">Slot booked successfully!</string>
+    <string name="booking_overlap">This slot overlaps with an existing booking</string>
+    <string name="booking_limit_daily">Maximum 2 bookings per day per ground reached</string>
+    <string name="booking_limit_weekly">Maximum 10 bookings per week reached</string>
+    <!-- Teams -->
+    <string name="create_team">Create Team</string>
+    <string name="join_team">Join Team</string>
+    <string name="request_captain">Request Captain Role</string>
+    <string name="team_name">Team Name</string>
+    <string name="captain">Captain</string>
+    <string name="member">Member</string>
+    <!-- Challenges -->
+    <string name="post_challenge">Post Challenge</string>
+    <string name="challenge_board">Challenge Board</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="pending">Pending</string>
+    <string name="accepted">Accepted</string>
+    <string name="declined">Declined</string>
+    <!-- Sports -->
+    <string name="cricket">Cricket</string>
+    <string name="football">Football</string>
+    <string name="volleyball">Volleyball</string>
+    <string name="throwball">Throwball</string>
+    <string name="dodgeball">Dodgeball</string>
+    <string name="running">Running</string>
+    <!-- Roles -->
+    <string name="role_member">Member</string>
+    <string name="role_captain">Captain</string>
+    <string name="role_supervisor">Supervisor</string>
+    <string name="role_admin">Admin</string>
+    <!-- Admin -->
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="add_ground">Add Ground</string>
+
+    <string name="format_email">📧 %1$s</string>
+    <string name="format_phone">📱 %1$s</string>
+    <string name="format_sport">⚽ Sport: %1$s</string>
+    <string name="format_team_name_sport">%1$s (%2$s)</string>
+    <string name="format_team_request">Team %1$s (%2$s)</string>
+    <string name="format_captain_request">%1$s requests Captain role</string>
+    <string name="format_challenge_matchup">%1$s → %2$s</string>
+    <string name="format_challenge_time">%1$s %2$s</string>
+    <string name="format_booking_time">%1$s – %2$s</string>
+    <string name="format_today_date">Today · %1$s</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/dark_slate"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:padding="@dimen/spacing_md">
+            <TextView
+                android:id="@+id/tvDetailGroundName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ground Name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvDetailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/mint_green"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <!-- Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_md">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Sports Supported" style="@style/SectionHeader"
+                        android:layout_marginBottom="6dp" />
+                    <TextView android:id="@+id/tvDetailSports"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Cricket · Football" style="@style/BodyText" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/divider" android:layout_marginVertical="12dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Operating Hours" style="@style/SectionHeader"
+                        android:layout_marginBottom="6dp" />
+                    <TextView android:id="@+id/tvDetailHours"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="06:00 AM – 10:00 PM" style="@style/BodyText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Today's Bookings -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_md">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Today's Schedule" style="@style/SectionHeader"
+                        android:layout_marginBottom="6dp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGroundSchedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                    <TextView android:id="@+id/tvNoDetailSchedule"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="No bookings today for this ground"
+                        android:textColor="@color/text_hint"
+                        android:gravity="center" android:padding="@dimen/spacing_md"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditGround"
+                style="@style/KreedaButtonOutlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✏️ Edit Ground Info"
+                android:layout_marginBottom="@dimen/spacing_sm" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBookThisGround"
+                style="@style/KreedaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book a Slot Here"
+                android:layout_marginBottom="@dimen/spacing_lg" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

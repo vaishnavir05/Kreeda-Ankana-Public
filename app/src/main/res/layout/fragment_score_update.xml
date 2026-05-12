@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Update Score" style="@style/SectionHeader"
+            android:textSize="20sp" android:layout_marginBottom="@dimen/spacing_md" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/KreedaCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <TextView android:id="@+id/tvScoreHint"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Score format hint" style="@style/BodyText"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <!-- New Game details when no match exists -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSport"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSport"
+                        android:hint="Sport (e.g. Cricket, Football)"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTeamA"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTeamA"
+                        android:hint="Team A Name"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTeamB"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTeamB"
+                        android:hint="Team B Name"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTeamAScore"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTeamAScore"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTeamBScore"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTeamBScore"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWinner"
+                    style="@style/KreedaInput"
+                    app:hintEnabled="false"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWinner"
+                        android:hint="Winner Team Name (or Draw)"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmitScore"
+                    style="@style/KreedaButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Score" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

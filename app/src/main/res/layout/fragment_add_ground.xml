@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/dark_slate"
+            android:gravity="center_vertical"
+            android:padding="@dimen/spacing_md">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Add New Ground" android:textColor="@color/white"
+                android:textSize="18sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ground Name"
+                        android:textColor="@color/dark_slate"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etGroundName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter ground name"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:background="@drawable/edit_text_border"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/dark_slate"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etGroundAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter location"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:background="@drawable/edit_text_border"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Time"
+                        android:textColor="@color/dark_slate"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/btnOpenTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="Select Open Time"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:background="@drawable/edit_text_border"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Close Time"
+                        android:textColor="@color/dark_slate"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/btnCloseTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="Select Close Time"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:background="@drawable/edit_text_border"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sports (comma-separated)"
+                        android:textColor="@color/dark_slate"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etGroundSports"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cricket, Football, etc."
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:background="@drawable/edit_text_border"
+                        android:layout_marginBottom="24dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddGround"
+                        style="@style/KreedaButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add Ground" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

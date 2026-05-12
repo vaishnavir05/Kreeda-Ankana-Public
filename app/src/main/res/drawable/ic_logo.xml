@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo mark: circle ring with KA initials layered in brand colors -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer ring -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="5dp" android:color="#5F6D68"/>
+            <solid android:color="#F4F8F6"/>
+        </shape>
+    </item>
+
+    <!-- Teal brush stroke -->
+    <item android:top="14dp" android:left="4dp" android:right="20dp" android:bottom="28dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#A7D6C6"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Yellow brush stroke -->
+    <item android:top="28dp" android:left="16dp" android:right="4dp" android:bottom="14dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F8EDAA"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+</layer-list>

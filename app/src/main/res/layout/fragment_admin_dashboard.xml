@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/dark_slate"
+                android:padding="@dimen/spacing_md">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Admin Dashboard" android:textColor="@color/white"
+                    android:textSize="18sp" android:textStyle="bold" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSeedData"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seed Data"
+                    android:textColor="@color/pastel_yellow"
+                    app:rippleColor="@color/white" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <!-- Captain Requests -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_md">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pending Captain Requests" style="@style/SectionHeader"
+                        android:layout_marginBottom="@dimen/spacing_sm" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCaptainRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                    <TextView android:id="@+id/tvNoCaptainRequests"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="No pending requests" android:textColor="@color/text_hint"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Team Requests -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_md">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pending Team Requests" style="@style/SectionHeader"
+                        android:layout_marginBottom="@dimen/spacing_sm" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTeamRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                    <TextView android:id="@+id/tvNoTeamRequests"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="No pending team requests" android:textColor="@color/text_hint"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Ground Requests -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_md">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pending Ground Requests" style="@style/SectionHeader"
+                        android:layout_marginBottom="@dimen/spacing_sm" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGroundRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                    <TextView android:id="@+id/tvNoGroundRequests"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="No pending ground requests" android:textColor="@color/text_hint"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!-- All Bookings -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/KreedaCard"
+                android:layout_marginBottom="@dimen/spacing_xl">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Today's All Bookings" style="@style/SectionHeader"
+                        android:layout_marginBottom="@dimen/spacing_sm" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAllBookings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddEntity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        app:backgroundTint="@color/dark_slate" />
+
+</FrameLayout>

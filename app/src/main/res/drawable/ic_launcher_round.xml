@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Circular launcher icon (ic_launcher_round).
+    This is what Android Studio's Image Asset tool generates for the round icon variant.
+    It clips the logo bitmap inside a circle using an oval clipping mask.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Step 1: Circular dark-slate background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1A2421" />
+        </shape>
+    </item>
+
+    <!-- Step 2: Logo fills the circle (clipped by the oval above via system mask) -->
+    <item>
+        <bitmap
+            android:src="@drawable/ic_kreeda_logo"
+            android:gravity="fill"
+            android:antialias="true"
+            android:filter="true" />
+    </item>
+
+</layer-list>
