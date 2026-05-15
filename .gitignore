@@ -1,37 +1,39 @@
+# Gradle
+.gradle/
+build/
+/app/build/
+
+# IDE - Android Studio / IntelliJ
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.iws
+/out/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Local configuration
 local.properties
+captures/
+.externalNativeBuild
+.cxx/
 
-# Google Services (Firebase) - SHOULD BE IGNORED IF YOU WANT FULL PROTECTION
-google-services.json
-
-# Secrets
+# Firebase & Secrets
+# Note: google-services.json contains project IDs and API keys. 
+# It is recommended to ignore it for public repositories.
+app/google-services.json
 secrets.xml
 signing.properties
 *.jks
 *.keystore
 
-# Gradle
-.gradle/
-build/
-
-# IDE
-.idea/
-*.iml
-*.iws
-
-# OS
+# OS specific
 .DS_Store
 Thumbs.db
+*.swp
+
+# Log files
+*.log
