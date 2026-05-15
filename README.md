@@ -86,9 +86,21 @@ To install the debug APK on a connected device:
 ---
 
 ## 📸 Screenshots
-| Home Dashboard | Ground Booking | Challenge Board |
+
+### 🏠 App Experience
+| Login & Auth | Home Dashboard | User Profile |
 | :---: | :---: | :---: |
-| ![Home](screenshots/home.png) | ![Booking](screenshots/booking.png) | ![Challenges](screenshots/challenges.png) |
+| ![Login](screenshots/Login_page.jpeg) | ![Home](screenshots/Home_screen.jpeg) | ![Profile](screenshots/User_profile.jpeg) |
+
+### 🏟️ Grounds & Booking
+| Grounds List | Slot Booking | Teams Management |
+| :---: | :---: | :---: |
+| ![Grounds](screenshots/Grounds.jpeg) | ![Booking](screenshots/Slot_booking.jpeg) | ![Teams](screenshots/Teams.jpeg) |
+
+### ⚔️ Matches & Challenges
+| Challenge Board | Score Wall |
+| :---: | :---: |
+| ![Challenges](screenshots/Challenege_board.jpeg) | ![Scores](screenshots/Score_wall.jpeg) |
 
 ---
 
