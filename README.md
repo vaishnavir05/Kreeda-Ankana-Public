@@ -88,7 +88,7 @@ To install the debug APK on a connected device:
 ## 📸 Screenshots
 | Home Dashboard | Ground Booking | Challenge Board |
 | :---: | :---: | :---: |
-| ![Home](https://raw.githubusercontent.com/vaishnavir05/Kreeda-Ankana-Public/main/app/src/main/res/drawable/ic_kreeda_logo.png) | *Coming Soon* | *Coming Soon* |
+| ![Home](screenshots/home.png) | ![Booking](screenshots/booking.png) | ![Challenges](screenshots/challenges.png) |
 
 ---
 
